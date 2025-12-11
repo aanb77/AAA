@@ -1,0 +1,364 @@
+body {
+    background-color: rgb(236 253 255);
+    
+}
+
+
+/*---footer, espace colonne, dark mode, responsive design---*/
+
+
+
+
+
+
+/*------------mise en mode Responsive---*/
+
+/* pour tablette */
+@media (max-width: 1024px) {
+    .main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .Fichiers {
+        width: 100%;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .bouton {
+        margin-inline-start: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* grand bloc */
+    .Systeme,
+    .cpu,
+    .memory,
+    .Réseau,
+    .Fichiers,
+    .Processus,
+    .Processus2 
+    .bouton 
+    .header
+    .footer
+    .text_footer{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+
+
+
+/* -------cest en haut------*/
+.header {
+    /* backgroud color utiliser avec css gardien.io */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px;
+    height: auto;
+    background: linear-gradient(84deg, rgba(42, 123, 155, 1) 0%, rgba(151, 170, 204, 1) 50%, rgba(212, 235, 255, 1) 100%);
+    box-shadow: 0 2px 8px 0 rgba(214, 27, 27, 0.2);
+    border-radius: 2px;
+}
+
+.header_title {
+    color: white;
+    text-align: left;
+    padding: 10px;
+    font-size: 24px;
+    height: auto;
+}
+
+/*---logo---*/
+.logo {
+    width: 74px;
+    height: auto;
+}
+
+
+
+
+/* ------cest le main-------------- */
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 27px 24px;
+    /* espace colonnes */
+    margin: -4px;
+    padding: 2%;
+    margin-top: 26px;
+}
+/*---regler le probleme des espaces debut ligne fin pour etre corda ---*/
+
+
+
+
+/*------systeme-*/
+.Systeme {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 8px 0 rgba(214, 27, 27, 0.2);
+    width: 85%;
+    height: 104%;
+    border-radius: 7px;
+}
+
+.section_Systeme {
+    background: #88b9e3;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    background: linear-gradient(0deg, rgba(136, 185, 227, 1) 0%, rgba(141, 247, 194, 1) 100%);
+    text-align: center;
+    font-size: 13px;
+    color: black;
+    padding: 1%;
+    margin: 0px;
+}
+
+.text_systeme {
+    margin: 16px;
+}
+
+
+
+/*---------cpu*------*/
+.cpu {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 8px 0 rgba(214, 27, 27, 0.2);
+    width: 85%;
+    height: 104%;
+    border-radius: 7px;
+}
+
+.section_cpu {
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    background: #62bbde;
+    background: linear-gradient(90deg, rgba(98, 187, 222, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(189, 157, 235, 1) 100%);
+    text-align: center;
+    font-size: 13px;
+    color: black;
+    padding: 1%;
+    margin: 0px;
+}
+
+.text_cpu {
+    margin: 15px;
+}
+
+
+
+
+
+/*------memory-----*/
+.memory {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 8px 0 rgba(214, 27, 27, 0.2);
+    width: 85%;
+    height: 104%;
+    border-radius: 7px;
+}
+
+.section_memory {
+    background: #88b9e3;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    background: linear-gradient(0deg, rgba(136, 185, 227, 1) 0%, rgba(141, 247, 194, 1) 100%);
+    text-align: center;
+    font-size: 13px;
+    color: black;
+    padding: 1%;
+    margin: 0px;
+}
+
+.text_memory {
+    margin: 15px;
+}
+
+
+
+
+/*------réseau--------*/
+.Réseau {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 8px 0 rgba(214, 27, 27, 0.2);
+    width: 85%;
+    height: 68%;
+    border-radius: 7px;
+}
+
+.section_reseau {
+    background: #88b9e3;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    background: linear-gradient(90deg, rgba(98, 187, 222, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(189, 157, 235, 1) 100%);
+    text-align: center;
+    font-size: 13px;
+    color: black;
+    padding: 1%;
+    margin: 0px;
+}
+
+.text_reseau {
+    margin: 15px;
+}
+
+
+
+
+
+/*-------fichiers-------*/
+.Fichiers {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 8px 0 rgba(214, 27, 27, 0.2);
+    width: 190%;
+    height: auto;
+    /* permet  d'augmenter la hauteur */
+    padding-bottom: 17px;
+    border-radius: 7px;
+    transform: translateY(-90px);
+    z-index: 5;
+
+}
+
+.section_fichier {
+    background: #88b9e3;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    background: linear-gradient(90deg, rgba(98, 187, 222, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(189, 157, 235, 1) 100%);
+    text-align: center;
+    font-size: 13px;
+    color: black;
+    padding: 1%;
+    margin: 0px;
+}
+
+.text_fichier {
+    margin: 15px;
+}
+
+
+
+
+
+
+/*--processus--*/
+.Processus {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 8px 0 rgba(214, 27, 27, 0.2);
+    width: 85%;
+    height: 68%;
+    border-radius: 7px;
+}
+
+.section_processus {
+    background: #88b9e3;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    background: linear-gradient(0deg, rgba(136, 185, 227, 1) 0%, rgba(141, 247, 194, 1) 100%);
+    text-align: center;
+    font-size: 13px;
+    color: black;
+    padding: 1%;
+    margin: 0px;
+}
+
+
+.text_processus {
+    margin: 15px;
+}
+
+
+
+
+
+/*--processus2------------------*/
+.Processus2 {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 8px 0 rgba(214, 27, 27, 0.2);
+    width: 85%;
+    height: 126%;
+    border-radius: 7px;
+}
+
+.section_processus2 {
+    background: #88b9e3;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    background: linear-gradient(90deg, rgba(98, 187, 222, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(189, 157, 235, 1) 100%);
+    text-align: center;
+    font-size: 13px;
+    color: black;
+    padding: 1%;
+    margin: 0px;
+}
+
+.text_processus2 {
+    margin: 15px;
+}
+
+
+
+
+
+/*-----bouton------*/
+.bouton {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(8, 140, 196, 1) 0%, rgba(150, 187, 235, 1) 67%);
+    border: none;
+    padding: 20px 35px;
+    text-decoration: none;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 9px;
+    margin-inline-start: 70px;/* pour centrer le bouton en ligne*/
+    margin-block-start: 29px; /* pour centrer le bouton en bas  */
+    height: auto;
+}
+
+.text_bouton{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    height: auto;
+}
+
+
+
+
+
+/*----------footer----------regler le probleme du footer le rapprocher de colonne  */
+.footer {
+    background: linear-gradient(84deg, rgba(42, 123, 155, 1) 0%, rgba(151, 170, 204, 1) 50%, rgba(212, 235, 255, 1) 100%);
+    text-align: center;
+    box-shadow: 0 2px 8px 0 rgba(214, 27, 27, 0.2);
+    padding: 21px;
+    border-radius: 2px;
+}
+
+.text_footer {
+    color: white;
+}
