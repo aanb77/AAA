@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="10">
     <title>challenge triple A </title>
 
     <link rel="stylesheet" href="../css/template.css">
@@ -34,8 +35,8 @@
             </div>
             <div class=" text_systeme">
                 <p> Nom de la machine : {{nom_machine}}</p>
-                <p> Système d'exploitation : {{os_info}}<< /p>
-                        <p> Uptime :{{uptime}}< </p>
+                <p> Système d'exploitation : {{os_info}}</p>
+                        <p> Uptime :{{uptime}} </p>
                                 <p> nombre d'utilisateurs :{{nb_users}}< </p>
 
             </div>
@@ -60,7 +61,7 @@
             <div class=" text_memory">
                 <p>RAM total : {{ram_total}}</p>
                 <p>RAM utilisée : {{ram_used}}</p>
-                <p>RAM pourcentage : {{ram_percent}}</p>
+                <p>RAM pourcentage : {{ram_percent}} %</p>
             </div>
             <!-- avec barre de progression visuel !-->
         </section>
@@ -94,7 +95,6 @@
             <div class=" text_processus2">
                 <p> CPU top 3 : {{top_cpu}}</p>
                 <p> RAM top 3 : {{top_ram}}</p>
-                <p>3.</p>
             </div>
             <button class="bouton">
                 <div class="text_bouton"> Générer un rapport </div>
