@@ -14,7 +14,7 @@
 
 
 
-    
+
     <!--metre un logo-->
     <header class="header">
         <img class="logo" src="../screenshots/logo_CAA.png" alt="logo_CAA">
@@ -33,10 +33,11 @@
                 <h2> Système </h2>
             </div>
             <div class=" text_systeme">
-                <p> Nom de la machine : </p>
-                <p> Système d'exploitation : </p>
-                <p> Uptime : </p>
-                <p> nombre d'utilisateurs : </p>
+                <p> Nom de la machine : {{nom_machine}}</p>
+                <p> Système d'exploitation : {{os_info}}<< /p>
+                        <p> Uptime :{{uptime}}< </p>
+                                <p> nombre d'utilisateurs :{{nb_users}}< </p>
+
             </div>
         </section>
 
@@ -45,9 +46,9 @@
                 <h2> CPU </h2>
             </div>
             <div class=" text_cpu">
-                <p>Nombre de coeur : </p>
-                <p>fréquence :</p>
-                <p>Pourcentage d'utilisation :</p>
+                <p>Nombre de coeur : {{coeurs_physiques}}/{{coeurs_logique}} </p>
+                <p>fréquence : {{freq_val}} </p>
+                <p>Pourcentage d'utilisation : {{cpu_percent}}</p>
             </div>
         </section>
 
@@ -57,9 +58,9 @@
                 <h2> MEMORY </h2>
             </div>
             <div class=" text_memory">
-                <p>RAM total :</p>
-                <p>RAM utilisée :</p>
-                <p>RAM pourcentage :</p>
+                <p>RAM total : {{ram_total}}</p>
+                <p>RAM utilisée : {{ram_used}}</p>
+                <p>RAM pourcentage : {{ram_percent}}</p>
             </div>
             <!-- avec barre de progression visuel !-->
         </section>
@@ -70,7 +71,7 @@
                 <h2>RESEAU </h2>
             </div>
             <div class=" text_reseau">
-                <p> Adresse IP principal :</p>
+                <p> Adresse IP principal : {{ip_machine}}</p>
             </div>
         </section>
 
@@ -91,11 +92,11 @@
                 <h2> PROCESSUS </h2>
             </div>
             <div class=" text_processus2">
-                <p>1.</p>
-                <p>2.</p>
+                <p> CPU top 3 : {{top_cpu}}</p>
+                <p> RAM top 3 : {{top_ram}}</p>
                 <p>3.</p>
             </div>
-            <button class="bouton"> 
+            <button class="bouton">
                 <div class="text_bouton"> Générer un rapport </div>
             </button>
         </section>
@@ -106,7 +107,10 @@
                 <h2>FICHIER </h2>
             </div>
             <div class=" text_fichier">
-                <p>Statistique sur les types de fichier analysés :</p>
+                <p>Dossiers analysés : {{dossier_scan}}</p>
+                <p>Total fichier : {{total_fichiers}} </p>
+                <p> statistique fichier analysés : {{stats_fichiers}} 
+                </p>
             </div>
         </section>
 
@@ -119,10 +123,11 @@
 
 
     <footer class="footer">
-        <div class="text_footer"><h5>CHALLENGE TRIPLE A BY CAA </h5> </div>
+        <div class="text_footer">
+            <h5>CHALLENGE TRIPLE A BY CAA </h5>
+        </div>
     </footer>
 
 </body>
 
 </html>
-
