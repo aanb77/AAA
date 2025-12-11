@@ -230,13 +230,12 @@ def dashboard_expert():
                     fp.write(html_content)
 
             except PermissionError:
-                print(f"ERREUR CRITIQUE : Permission refusée d'écrire dans {dossier_html}")
-                print("Astuce : Lancez le script avec 'sudo' ou changez les droits du dossier.")        
+                print(f"ERREUR CRITIQUE : Permission refusée d'écrire dans {dossier_html}")        
             except Exception as e:
                 print(f"Erreur lors de la génération HTML : {e}")
 
             # Pause avant rafraichissement
-            time.sleep(10)
+            time.sleep(30)
 
     except KeyboardInterrupt:
         print("\nArrêt du programme.")
