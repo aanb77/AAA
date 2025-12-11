@@ -179,36 +179,61 @@ def dashboard_expert():
             print("-" * 60)
             print(" CTRL+C pour arrêter")
 
-            env = jinja2.Environment(loader=jinja2.FileSystemLoader('.'))
-            template = env.get_template("template.html")
+            # --- GÉNÉRATION JINJA2 ---
             
-            # On envoie toutes les données d'un coup
-            html_content = template.render(
-                coeurs_physiques=coeurs_physiques,
-                coeurs_logique=coeurs_logique,
-                cpu_percent=cpu_percent,
-                freq_val=freq_val,
-                ram_used=ram_used,
-                ram_total=ram_total,
-                mem_percent=mem.percent,
-                top_cpu_list=top_cpu_list,  
-                top_ram_list=top_ram_list,
-                nom_machine=nom_machine,
-                os_info=os_info,
-                ip_machine=ip_machine,
-                uptime_str=uptime_str,
-                nb_users=nb_users,
-                total_selection=total_selection,
-                stats_fichiers=stats_fichiers
-            )
-
-            with open("index.html", "w", encoding="utf-8") as fp:
-                fp.write(html_content)
-
-            time.sleep(30)
+            # Le dossier où Apache lit les fichiers
+            dossier_html = "/var/www/html"
             
-            with open("index.html", "w") as fp:
-                fp.write(html_content)
+            # # Le fichier de sortie 
+            fichier_sortie = os.path.join(dossier_html, 'index.html')
+            
+            # On dit à Jinja de chercher 'template.html' directement dans /var/www/html
+            env = jinja2.Environment(loader=jinja2.FileSystemLoader(dossier_html))
+            try:
+                template = env.get_template("template.html")
+                
+                # 2. On prépare toutes les données à envoyer au HTML
+                contexte = {
+                    'nom_machine': nom_machine,
+                    'os_info': os_info,
+                    'ip_machine': ip_machine,
+                    'date_demarrage': date_demarrage,
+                    'uptime': uptime_str,
+                    'nb_users': nb_users,
+                    
+                    # CPU
+                    'coeurs_physiques': coeurs_physiques,
+                    'coeurs_logique': coeurs_logique,
+                    'cpu_percent': cpu_percent,
+                    'freq_val': freq_val,
+                    
+                    # RAM
+                    'ram_used': ram_used,
+                    'ram_total': ram_total,
+                    'ram_percent': mem.percent,
+                    
+                    # PROCESSUS EN COURS 
+                    'top_cpu': top_cpu_list,
+                    'top_ram': top_ram_list,
+                    
+                    # FICHIERS
+                    'dossier_scan': path_scan.name,
+                    'total_fichiers': total_selection,
+                    'stats_fichiers': stats_fichiers  # Dictionnaire {'txt': 0, 'py': 5...}
+                }
+
+                # 3. Rendu du HTML
+                html_content = template.render(contexte)
+                
+                # 4. Écriture du fichier final
+                with open(fichier_sortie, "w", encoding="utf-8") as fp:
+                    fp.write(html_content)
+
+            except PermissionError:
+                print(f"ERREUR CRITIQUE : Permission refusée d'écrire dans {dossier_html}")
+                print("Astuce : Lancez le script avec 'sudo' ou changez les droits du dossier.")        
+            except Exception as e:
+                print(f"Erreur lors de la génération HTML : {e}")
 
             # Pause avant rafraichissement
             time.sleep(10)
