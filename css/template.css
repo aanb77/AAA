@@ -92,6 +92,12 @@ body {
     height: auto;
 }
 
+.text_nom {
+    color: white;
+    text-align: center;
+    height: auto;
+}
+
 /*---logo---*/
 .logo {
     width: 74px;
@@ -109,6 +115,7 @@ body {
     /* espace colonnes */
     margin: -4px;
     padding: 2%;
+    padding-bottom: 40px;
     margin-top: 26px;
 }
 /*---regler le probleme des espaces debut ligne fin pour etre corda ---*/
@@ -233,14 +240,11 @@ body {
 .Fichiers {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 2px 8px 0 rgba(214, 27, 27, 0.2);
-    width: 190%;
+    width: 86%;
     height: auto;
     /* permet  d'augmenter la hauteur */
     padding-bottom: 17px;
     border-radius: 7px;
-    transform: translateY(-90px);
-    z-index: 5;
-
 }
 
 .section_fichier {
@@ -263,17 +267,16 @@ body {
 
 
 
-
-/*--processus--*/
-.Processus {
+/*--processus2------------------*/
+.Processus2 {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 2px 8px 0 rgba(214, 27, 27, 0.2);
     width: 85%;
-    height: 68%;
+    height: 101%;
     border-radius: 7px;
 }
 
-.section_processus {
+.section_processus2 {
     background: #88b9e3;
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;
@@ -285,68 +288,9 @@ body {
     margin: 0px;
 }
 
-
-.text_processus {
-    margin: 15px;
-}
-
-
-
-
-
-/*--processus2------------------*/
-.Processus2 {
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 2px 8px 0 rgba(214, 27, 27, 0.2);
-    width: 85%;
-    height: 126%;
-    border-radius: 7px;
-}
-
-.section_processus2 {
-    background: #88b9e3;
-    border-top-right-radius: 7px;
-    border-top-left-radius: 7px;
-    background: linear-gradient(90deg, rgba(98, 187, 222, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(189, 157, 235, 1) 100%);
-    text-align: center;
-    font-size: 13px;
-    color: black;
-    padding: 1%;
-    margin: 0px;
-}
-
 .text_processus2 {
     margin: 15px;
 }
-
-
-
-
-
-/*-----bouton------*/
-.bouton {
-    display: flex;
-    align-items: center;
-    background: linear-gradient(90deg, rgba(8, 140, 196, 1) 0%, rgba(150, 187, 235, 1) 67%);
-    border: none;
-    padding: 20px 35px;
-    text-decoration: none;
-    font-size: 17px;
-    cursor: pointer;
-    border-radius: 9px;
-    margin-inline-start: 70px;/* pour centrer le bouton en ligne*/
-    margin-block-start: 29px; /* pour centrer le bouton en bas  */
-    height: auto;
-}
-
-.text_bouton{
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    height: auto;
-}
-
-
 
 
 

@@ -23,7 +23,7 @@
             <h2>DASH BOARD</h2>
         </div>
         <div class="text_nom">
-            <h2> {{ nom_machine}} </h2>
+            <h2> Drogon7 </h2>
         </div>
     </header>
 
@@ -37,10 +37,10 @@
                 <h2> Système </h2>
             </div>
             <div class=" text_systeme">
-                <p> Nom de la machine : {{nom_machine}}</p>
-                <p> Système d'exploitation : {{os_info}}</p>
-                <p> Uptime :{{uptime}} </p>
-                <p> nombre d'utilisateurs :{{nb_users}} </p>
+                <p> Nom de la machine : Drogon7</p>
+                <p> Système d'exploitation : Windows 11</p>
+                <p> Uptime :2:04:19 </p>
+                <p> nombre d'utilisateurs :1 </p>
 
             </div>
         </section>
@@ -50,9 +50,9 @@
                 <h2> CPU </h2>
             </div>
             <div class=" text_cpu">
-                <p>Nombre de coeur : {{coeurs_physiques}}/{{coeurs_logique}} </p>
-                <p>fréquence : {{freq_val}} Mhz</p>
-                <p>Pourcentage d'utilisation : {{cpu_percent}} %</p>
+                <p>Nombre de coeur : 8/16 </p>
+                <p>fréquence : 2523.0 Mhz</p>
+                <p>Pourcentage d'utilisation : 0.0 %</p>
             </div>
         </section>
 
@@ -62,9 +62,9 @@
                 <h2> MEMORY </h2>
             </div>
             <div class=" text_memory">
-                <p>RAM total : {{ram_total | round(2) }} Gb</p>
-                <p>RAM utilisée : {{ram_used | round(2)}} Gb</p>
-                <p>RAM pourcentage : {{ram_percent}} %</p>
+                <p>RAM total : 15.82 Gb</p>
+                <p>RAM utilisée : 10.9 Gb</p>
+                <p>RAM pourcentage : 68.9 %</p>
             </div>
             <!-- avec barre de progression visuel !-->
         </section>
@@ -75,7 +75,7 @@
                 <h2>RESEAU </h2>
             </div>
             <div class=" text_reseau">
-                <p> Adresse IP principal : {{ip_machine}}</p>
+                <p> Adresse IP principal : 172.20.10.9</p>
             </div>
         </section>
 
@@ -89,15 +89,23 @@
 
             <div class="text_processus2">
                 <p>CPU top 3 :</p>
-                {% for proc in top_cpu %}
-                <p>- {{ proc.name }} (PID {{ proc.pid }}) : {{ proc.cpu_percent }}%</p>
-                {% endfor %}
+                
+                <p>- explorer.exe (PID 9092) : 30.9%</p>
+                
+                <p>- dwm.exe (PID 2008) : 17.7%</p>
+                
+                <p>- python3.13.exe (PID 3944) : 13.2%</p>
+                
 
                 <br><!--retour a la ligne-->
                 <p>RAM top 3 :</p>
-                {% for proc in top_ram %}
-                <p>- {{ proc.name }} (PID {{ proc.pid }}) : {{ proc.memory_percent | round(1) }}%</p>
-                {% endfor %}
+                
+                <p>- MemCompression (PID 3880) : 7.6%</p>
+                
+                <p>- explorer.exe (PID 9092) : 3.1%</p>
+                
+                <p>- opera.exe (PID 22472) : 2.5%</p>
+                
             </div>
         </section>
 
@@ -106,19 +114,35 @@
                 <h2>FICHIER</h2>
             </div>
             <div class="text_fichier">
-                <p>Dossiers analysés : <em>{{ dossier_scan }}</em></p>
-                <p>Total fichiers : <strong>{{ total_fichiers }}</strong></p>
+                <p>Dossiers analysés : <em>Documents</em></p>
+                <p>Total fichiers : <strong>0</strong></p>
                 <p>Statistiques fichiers analysés :</p>
 
-                {% for ext, count in stats_fichiers.items() %}
-                <p>{{ ext }} : <strong>{{ count }}</strong>
-                    {% if total_fichiers > 0 %}
-                    ({{ (count / total_fichiers * 100) | round(1) }}%)
-                    {% else %}
+                
+                <p>.txt : <strong>0</strong>
+                    
                     (0%)
-                    {% endif %}
+                    
                 </p>
-                {% endfor %}
+                
+                <p>.py : <strong>0</strong>
+                    
+                    (0%)
+                    
+                </p>
+                
+                <p>.pdf : <strong>0</strong>
+                    
+                    (0%)
+                    
+                </p>
+                
+                <p>.jpg : <strong>0</strong>
+                    
+                    (0%)
+                    
+                </p>
+                
             </div>
         </section>
 
