@@ -179,15 +179,36 @@ def dashboard_expert():
             print("-" * 60)
             print(" CTRL+C pour arrêter")
 
-            html = open("template.html").read()
-            html = html.replace("INSERT PHYSICAL_CORE", {{ coeurs_physiques }})
-            html = html.replace("INSERT LOGICAL_CORE", {{ coeurs_logique }})
-            html = html.replace("INSERT CPU_USAGE", {{ cpu_percent }})
-            html = html.replace("INSERT CPU_FREQ", {{ freq_val }})
-            html = html.replace("INSERT RAM_USED", {{ ram_used }})
-            html = html.replace("INSERT RAM_TOTAL", {{ ram_total }})
-            html = html.replace("INSERT RAM_PERCENT", {{ mem.percent }})
-            html = html.replace("INSERT UPTIME", {{ uptime_str }})
+            env = jinja2.Environment(loader=jinja2.FileSystemLoader('.'))
+            template = env.get_template("template.html")
+            
+            # On envoie toutes les données d'un coup
+            html_content = template.render(
+                coeurs_physiques=coeurs_physiques,
+                coeurs_logique=coeurs_logique,
+                cpu_percent=cpu_percent,
+                freq_val=freq_val,
+                ram_used=ram_used,
+                ram_total=ram_total,
+                mem_percent=mem.percent,
+                top_cpu_list=top_cpu_list,  
+                top_ram_list=top_ram_list,
+                nom_machine=nom_machine,
+                os_info=os_info,
+                ip_machine=ip_machine,
+                uptime_str=uptime_str,
+                nb_users=nb_users,
+                total_selection=total_selection,
+                stats_fichiers=stats_fichiers
+            )
+
+            with open("index.html", "w", encoding="utf-8") as fp:
+                fp.write(html_content)
+
+            time.sleep(30)
+            
+            with open("index.html", "w") as fp:
+                fp.write(html_content)
 
             # Pause avant rafraichissement
             time.sleep(10)
