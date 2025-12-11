@@ -1,12 +1,13 @@
 # Challenge Triple A - Dashboard de Monitoring
 ## Description
-  c'est un monitor qui permet d'afficher les information de système
+  C'est un monitor qui permet d'afficher les information de système
 ## Prérequis
-- python 
-- libvirtd,
-- virt-manager
-- apache2
-- git
+- Python 
+- Libvirtd,
+- Virt-manager
+- Apache2
+- Git
+  
 ## Installation
 
 # Commandes pour installer les dépendances
@@ -18,15 +19,15 @@
 python monitor.py
 
 # Ouvrir index.html dans le navigateur
+Ouvrir dans le navigateur http://192.168.122.7
 
-ouvrir dans le navigateur http://192.168.122.7
 ## Fonctionnalités
-- information système
+- Information système
 - CPU
 - Memory (RAM)
-- addresse IP
+- Addresse IP
 - Procesus en cours
-- afficher extension fichier
+- Afficher extension fichier
   
 ## Captures d'écran
 <p align="center">
@@ -34,10 +35,10 @@ ouvrir dans le navigateur http://192.168.122.7
 </p>
 
 ## Difficultés rencontrées
-envoie donnée python au template.html
+Envoie donnée python au template.html
 
 ## Améliorations possibles
-export donnée template.html en fichier PDF
+Export donnée template.html en fichier PDF
 
 ## Auteur
 <table>
@@ -51,9 +52,9 @@ export donnée template.html en fichier PDF
   <tbody>
     <tr>
       <td align="center">
-        <img src="https://github.com/aanb77.png?size=32" alt="Alia Annabi" style="width:40px; height:40px; border-radius:4px;" />
+        <img src="https://github.com/aanb77.png?size=32" alt="Alya Annabi" style="width:40px; height:40px; border-radius:4px;" />
       </td>
-      <td><strong>Alia Annabi</strong></td>
+      <td><strong>Alya Annabi</strong></td>
       <td>HTML et CSS</td>
     </tr>
     <tr>
@@ -68,7 +69,7 @@ export donnée template.html en fichier PDF
         <img src="https://github.com/evanbonnal.png?size=32" alt="Evan Bonnal" style="width:40px; height:40px; border-radius:4px;" />
       </td>
       <td><strong>Evan Bonnal</strong></td>
-      <td>python , readme</td>
+      <td>Python</td>
     </tr>
   </tbody>
 </table>
