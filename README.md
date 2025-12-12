@@ -16,7 +16,7 @@
 ## Utilisation
 
 # Comment lancer le script
-python monitor.py
+Lancer la commande "python monitor.py" sur le terminal
 
 # Ouvrir index.html dans le navigateur
 Ouvrir dans le navigateur http://192.168.122.7
