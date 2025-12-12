@@ -36,9 +36,11 @@ Ouvrir dans le navigateur http://192.168.122.7
 
 ## Difficultés rencontrées
 Envoie donnée python au template.html
+difficulter a synchroniser le code python au template.html
 
 ## Améliorations possibles
 Export donnée template.html en fichier PDF
+Afficher les donner sous forme de graphique ou banniere
 
 ## Auteur
 <table>
