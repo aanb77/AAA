@@ -41,7 +41,7 @@ export donnée template.html en fichier PDF
       <td align="center">
         <img src="https://github.com/aanb77.png?size=32" alt="Alia Annabi" style="width:40px; height:40px; border-radius:4px;" />
       </td>
-      <td><strong>Alia Annabi</strong></td>
+      <td><strong>Alya Annabi</strong></td>
       <td>HTML et CSS</td>
     </tr>
     <tr>
